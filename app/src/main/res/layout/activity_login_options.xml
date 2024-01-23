@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#160730"
+    tools:context=".LoginOptionsActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/memberloginbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-5dp"
+            android:gravity="center"
+            android:text="Member Login"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/memberCard"
+            android:layout_width="@dimen/_200mdp"
+            android:layout_height="@dimen/_200mdp"
+            app:cardCornerRadius="@dimen/_8mdp"
+            android:elevation="@dimen/_5mdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_5mdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.tomlonghurst.expandablehinttext.ExpandableHintText
+                    android:layout_width="@dimen/_170mdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_3mdp"
+                    android:hint="UserName"
+                    android:textColor="#060F3C"
+                    app:floatingLabelColor="#060F3C"
+                    app:image="@drawable/ic_pro"
+                    app:imageColor="@color/white"
+                    app:textBoxColor="#CDC9C9"
+                    tools:ignore="MissingClass" />
+
+                <com.tomlonghurst.expandablehinttext.ExpandableHintText
+                    android:layout_width="@dimen/_170mdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_3mdp"
+                    android:layout_marginTop="@dimen/_5mdp"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColor="#060F3C"
+                    app:floatingLabelColor="#060F3C"
+                    app:image="@drawable/ic_pass"
+                    app:imageColor="@color/white"
+                    app:textBoxColor="#CDC9C9"
+                    tools:ignore="MissingClass" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Remember me"
+                    android:layout_gravity="right"
+                    android:textColor="#160730"/>
+                <Button
+                    android:id="@+id/btnmem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="#160730"
+                    android:text="Log In"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/_4mdp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <Button
+            android:layout_marginTop="@dimen/_7mdp"
+            android:id="@+id/arrangerloginbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-5dp"
+            android:gravity="center"
+            android:text="Executive Login"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/empcard"
+            android:visibility="gone"
+            android:layout_width="@dimen/_200mdp"
+            android:layout_height="@dimen/_200mdp"
+            app:cardCornerRadius="@dimen/_8mdp"
+            android:elevation="@dimen/_5mdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_5mdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.tomlonghurst.expandablehinttext.ExpandableHintText
+                    android:layout_width="@dimen/_170mdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_3mdp"
+                    android:hint="UserName"
+                    android:textColor="#060F3C"
+                    app:floatingLabelColor="#060F3C"
+                    app:image="@drawable/ic_pro"
+                    app:imageColor="@color/white"
+                    app:textBoxColor="#CDC9C9"
+                    tools:ignore="MissingClass" />
+
+                <com.tomlonghurst.expandablehinttext.ExpandableHintText
+                    android:layout_width="@dimen/_170mdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_3mdp"
+                    android:layout_marginTop="@dimen/_5mdp"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColor="#060F3C"
+                    app:floatingLabelColor="#060F3C"
+                    app:image="@drawable/ic_pass"
+                    app:imageColor="@color/white"
+                    app:textBoxColor="#CDC9C9"
+                    tools:ignore="MissingClass" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Remember me"
+                    android:layout_gravity="right"
+                    android:textColor="#160730"/>
+                <Button
+                    android:id="@+id/btnemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#160730"
+                    android:text="Log In"
+                    android:textAllCaps="true"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/_4mdp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <Button
+            android:layout_marginTop="@dimen/_7mdp"
+            android:id="@+id/adminloginbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-5dp"
+            android:gravity="center"
+            android:text="Admin Login"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/admincard"
+            android:visibility="gone"
+            android:layout_width="@dimen/_200mdp"
+            android:layout_height="@dimen/_180mdp"
+            app:cardCornerRadius="@dimen/_8mdp"
+            android:elevation="@dimen/_5mdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_5mdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.tomlonghurst.expandablehinttext.ExpandableHintText
+                    android:layout_width="@dimen/_170mdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_3mdp"
+                    android:hint="UserName"
+                    android:textColor="#060F3C"
+                    app:floatingLabelColor="#060F3C"
+                    app:image="@drawable/ic_pro"
+                    app:imageColor="@color/white"
+                    app:textBoxColor="#CDC9C9"
+                    tools:ignore="MissingClass" />
+
+                <com.tomlonghurst.expandablehinttext.ExpandableHintText
+                    android:layout_width="@dimen/_170mdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_3mdp"
+                    android:layout_marginTop="@dimen/_5mdp"
+                    android:hint="password"
+                    android:inputType="textPassword"
+                    android:textColor="#060F3C"
+                    app:floatingLabelColor="#060F3C"
+                    app:image="@drawable/ic_pass"
+                    app:imageColor="@color/white"
+                    app:textBoxColor="#CDC9C9"
+                    tools:ignore="MissingClass" />
+                <Button
+                    android:id="@+id/btnadmin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="#160730"
+                    android:text="Log In"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/_4mdp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</RelativeLayout>
