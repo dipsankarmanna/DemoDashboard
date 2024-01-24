@@ -2,6 +2,7 @@ package com.example.nidhidashboard;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.TranslateAnimation;
@@ -41,6 +42,12 @@ public class LoginOptionsActivity extends AppCompatActivity {
                 binding.admincard.setVisibility(View.GONE);
                 binding.empcard.setVisibility(View.VISIBLE);
                 binding.memberCard.setVisibility(View.GONE);
+            }
+        });
+        binding.btnmem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
             }
         });
     }
