@@ -38,12 +38,12 @@
 <!--            android:id="@+id/nav_btn"/>-->
 
         <FrameLayout
-            android:layout_below="@+id/toolbar"
-            android:layout_centerInParent="true"
-            android:background="#350B77"
+            android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_400mdp"
-            android:id="@+id/fragment_container"/>
+            android:layout_below="@+id/toolbar"
+            android:layout_centerInParent="true"
+            android:background="#350B77" />
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottonNavigationView"
             android:layout_alignParentBottom="true"
