@@ -46,4 +46,5 @@ dependencies {
     implementation("de.hdodenhof:circleimageview:3.1.0")
     implementation("com.github.MrNouri:DynamicSizes:1.0")
     implementation("com.github.thomhurst:ExpandableHintText:1.0.7")
+    implementation ("com.github.bumptech.glide:glide:4.15.1")
 }
