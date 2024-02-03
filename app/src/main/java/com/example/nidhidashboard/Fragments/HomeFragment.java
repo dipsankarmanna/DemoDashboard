@@ -27,6 +27,7 @@ public class HomeFragment extends Fragment {
     FragmentHomeBinding binding;
     ArrayList<Integer> list;
     //ViewPagerAdapter viewPagerAdapter;
+    ViewPager2 viewPager2;
 
     private Handler sliderHandler = new Handler();
     @Override
@@ -35,6 +36,8 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         binding=FragmentHomeBinding.inflate(getLayoutInflater());
         View view=binding.getRoot();//inflater.inflate(R.layout.fragment_home, container, false);
+        //setViewReferences(view);
+
 
         List<SliderItems> sliderItems = new ArrayList<>();
         sliderItems.add(new SliderItems(R.drawable.pageimg1));

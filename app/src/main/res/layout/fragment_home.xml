@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginTop="@dimen/_50mdp"
+    android:layout_height="wrap_content"
     tools:context=".Fragments.HomeFragment">
 
     <ScrollView
@@ -165,14 +164,19 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="@dimen/_7mdp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/_10mdp"
+                android:layout_marginVertical="@dimen/_10mdp">
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewpage"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_150mdp"
+                android:layout_height="match_parent"
                 android:background="@drawable/background_rec"
-                android:layout_marginVertical="@dimen/_10mdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
