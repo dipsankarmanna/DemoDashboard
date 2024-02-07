@@ -5,7 +5,7 @@
         android:title="HOME"
         android:icon="@drawable/ic_home"/>
 
-    <item android:id="@+id/navigation_notice"
+    <item android:id="@+id/navigation_pay"
         android:title="PAY"
         android:icon="@drawable/money_transfer"/>
 

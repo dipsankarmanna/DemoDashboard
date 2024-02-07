@@ -163,12 +163,24 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="@dimen/_7mdp">
+            android:padding="@dimen/_5mdp">
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <include layout="@layout/shimmer_layout"/>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="@dimen/_10mdp"
-                android:layout_marginVertical="@dimen/_10mdp">
+                android:layout_marginVertical="@dimen/_3mdp">
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewpage"
                 android:layout_width="match_parent"
@@ -227,10 +239,12 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_20mdp"
+                        android:layout_marginTop="@dimen/_18mdp"
+                        android:paddingHorizontal="@dimen/_18mdp"
                         android:gravity="center">
 
                         <androidx.cardview.widget.CardView
+                            android:layout_weight="1"
                             android:layout_width="@dimen/_45mdp"
                             android:layout_height="@dimen/_45mdp"
                             app:cardCornerRadius="@dimen/_50mdp">
@@ -249,6 +263,7 @@
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
+                            android:layout_weight="1"
                             android:layout_width="@dimen/_45mdp"
                             android:layout_height="@dimen/_45mdp"
                             android:layout_marginHorizontal="@dimen/_8mdp"
@@ -268,10 +283,10 @@
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
+                            android:layout_weight="1"
                             android:layout_width="@dimen/_45mdp"
                             android:layout_height="@dimen/_45mdp"
                             app:cardCornerRadius="@dimen/_50mdp">
-
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -287,11 +302,11 @@
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
+                            android:layout_weight="1"
                             android:layout_width="@dimen/_45mdp"
                             android:layout_height="@dimen/_45mdp"
                             android:layout_marginHorizontal="@dimen/_8mdp"
                             app:cardCornerRadius="@dimen/_50mdp">
-
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -307,6 +322,7 @@
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
+                            android:layout_weight="1"
                             android:layout_width="@dimen/_45mdp"
                             android:layout_height="@dimen/_45mdp"
                             app:cardCornerRadius="@dimen/_50mdp">
@@ -326,48 +342,64 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:paddingHorizontal="@dimen/_18mdp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_5mdp"
                         android:gravity="center">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Balance"
                             android:textColor="#ffffff"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="@dimen/_22mdp"
                             android:text="Send"
                             android:textColor="#ffffff"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Request"
                             android:textColor="#ffffff"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="@dimen/_15mdp"
                             android:text="Transfer"
                             android:textColor="#ffffff"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="history"
                             android:textColor="#ffffff"
                             android:textStyle="bold" />
                     </LinearLayout>
+
+<!--                    <TextView-->
+
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Dinesh Karmakar"-->
+<!--                        android:textStyle="bold" />-->
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -709,13 +741,6 @@
                                         android:orientation="vertical">
 
                                         <TextView
-
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="Dinesh Karmakar"
-                                            android:textStyle="bold" />
-
-                                        <TextView
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:text="Account Transfer"
@@ -868,7 +893,7 @@
                     </ScrollView>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>

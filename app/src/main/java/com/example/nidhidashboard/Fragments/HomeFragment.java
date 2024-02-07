@@ -1,5 +1,6 @@
 package com.example.nidhidashboard.Fragments;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,6 +14,7 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.nidhidashboard.R;
 import com.example.nidhidashboard.adapters.SliderAdapter;
@@ -37,6 +39,17 @@ public class HomeFragment extends Fragment {
         binding=FragmentHomeBinding.inflate(getLayoutInflater());
         View view=binding.getRoot();//inflater.inflate(R.layout.fragment_home, container, false);
         //setViewReferences(view);
+
+        //showShimmer();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                //hideShimmer();
+                binding.shm.setVisibility(View.GONE);
+                binding.lay.setVisibility(View.VISIBLE);
+            }
+        },5000);
 
 
         List<SliderItems> sliderItems = new ArrayList<>();
@@ -75,6 +88,39 @@ public class HomeFragment extends Fragment {
 
         return view;
     }
+
+   /* private void showShimmer() {
+        binding.balanceSh.startShimmer();
+        binding.sendSh.startShimmer();
+        binding.requestSh.startShimmer();
+        binding.transferSh.startShimmer();
+        binding.historySh.startShimmer();
+        binding.paybillSh.startShimmer();
+        binding.banktrSh.startShimmer();
+        binding.savingsSh.startShimmer();
+        binding.addmoneySh.startShimmer();
+    }
+    private void hideShimmer() {
+        binding.balanceSh.stopShimmer();
+        binding.sendSh.stopShimmer();
+        binding.requestSh.stopShimmer();
+        binding.transferSh.stopShimmer();
+        binding.historySh.stopShimmer();
+        binding.paybillSh.stopShimmer();
+        binding.banktrSh.stopShimmer();
+        binding.savingsSh.stopShimmer();
+        binding.addmoneySh.stopShimmer();
+
+        binding.balanceSh.setBackgroundColor(Color.TRANSPARENT);
+        binding.sendSh.setBackgroundColor(Color.TRANSPARENT);
+        binding.requestSh.setBackgroundColor(Color.TRANSPARENT);
+        binding.transferSh.setBackgroundColor(Color.TRANSPARENT);
+        binding.historySh.setBackgroundColor(Color.TRANSPARENT);
+        binding.paybillSh.setBackgroundColor(Color.TRANSPARENT);
+        binding.banktrSh.setBackgroundColor(Color.TRANSPARENT);
+        binding.savingsSh.setBackgroundColor(Color.TRANSPARENT);
+        binding.addmoneySh.setBackgroundColor(Color.TRANSPARENT);
+    }*/
 
     private final Runnable sliderRunnable = new Runnable() {
         @Override

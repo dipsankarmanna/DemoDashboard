@@ -6,29 +6,34 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.example.nidhidashboard.Fragments.HomeFragment;
+import com.example.nidhidashboard.Fragments.PayFragment;
 import com.example.nidhidashboard.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, BottomNavigationView.OnNavigationItemSelectedListener{
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, BottomNavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawerLayout;
     ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding=ActivityMainBinding.inflate(getLayoutInflater());
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         Toolbar toolbar = findViewById(R.id.toolbar); //Ignore red line errors
         toolbar.setTitle("Welcome Anup");
+        toolbar.setNavigationIcon(R.drawable.menu2);
         //this is an update
         setSupportActionBar(toolbar);
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -50,39 +55,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         binding.bottonNavigationView.setOnNavigationItemSelectedListener(this);
-        getSupportFragmentManager().beginTransaction().replace(R.id.lay, new HomeFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(binding.fragmentContainer.getId(), new HomeFragment()).commit();
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.nav_home) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+        FragmentTransaction fragment=null;
+        if (item.getItemId() == R.id.nav_home || item.getItemId()==R.id.navigation_home) {
+            fragment=getSupportFragmentManager().beginTransaction().replace(binding.fragmentContainer.getId(), new HomeFragment());
+        } else if (item.getItemId()==R.id.nav_policy) {
+            Toast.makeText(this, "Policy clicked", Toast.LENGTH_SHORT).show();
+        } else if (item.getItemId()==R.id.navigation_pay) {
+            fragment=getSupportFragmentManager().beginTransaction().replace(binding.fragmentContainer.getId(),new PayFragment());
         }
+        fragment.commit();
         return true;
     }
 
-    //    @Override
-//    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//        switch (item.getItemId()) {
-//            case R.id.nav_home:
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
-//                break;
-////        case R.id.nav_settings:
-////        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment()).commit();
-////        break;
-////        case R.id.nav_share:
-////        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ShareFragment()).commit();
-////        break;
-////        case R.id.nav_about:
-////        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AboutFragment()).commit();
-////        break;
-////        case R.id.nav_logout:
-////        Toast.makeText(this, "Logout!", Toast.LENGTH_SHORT).show();
-////        break;
-//        }
-//        drawerLayout.closeDrawer(GravityCompat.START);
-//        return true;
-//    }
+
 
     @Override
     public void onBackPressed() {

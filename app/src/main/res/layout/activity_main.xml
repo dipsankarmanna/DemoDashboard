@@ -7,59 +7,47 @@
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
-    android:background="@color/background_blue"
     tools:openDrawer="end"
     tools:context=".MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/dash_back"
         android:id="@+id/lay">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_alignParentTop="true"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_40mdp"
-        android:layout_marginHorizontal="@dimen/_2mdp"
-        android:background="@drawable/tool_gr"
-        android:elevation="@dimen/_4mdp"
-        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="@drawable/menu2" />
-
-<!--        <ImageView-->
-<!--            android:layout_width="@dimen/_30mdp"-->
-<!--            android:layout_height="@dimen/_30mdp"-->
-<!--            android:src="@drawable/menu2"-->
-<!--            android:layout_marginStart="@dimen/_5mdp"-->
-<!--            android:layout_marginTop="@dimen/_5mdp"-->
-<!--            android:scaleType="fitCenter"-->
-<!--            android:id="@+id/nav_btn"/>-->
-    <fragment
-        android:id="@+id/fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_300mdp"
-        android:layout_marginVertical="@dimen/_50mdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar" />
-</androidx.constraintlayout.widget.ConstraintLayout>
-
-<!--        <FrameLayout-->
+        <!--        <FrameLayout-->
 <!--            android:id="@+id/fragment_container"-->
 <!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="@dimen/_400mdp"-->
 <!--            android:layout_below="@+id/toolbar"-->
 <!--            android:layout_centerInParent="true"-->
 <!--            android:background="#350B77" />-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/_42mdp">
+
+            <!--        <ImageView-->
+            <!--            android:layout_width="@dimen/_30mdp"-->
+            <!--            android:layout_height="@dimen/_30mdp"-->
+            <!--            android:src="@drawable/menu2"-->
+            <!--            android:layout_marginStart="@dimen/_5mdp"-->
+            <!--            android:layout_marginTop="@dimen/_5mdp"-->
+            <!--            android:scaleType="fitCenter"-->
+            <!--            android:id="@+id/nav_btn"/>-->
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_60mdp"
+                app:layout_constraintBottom_toTopOf="@id/bottonNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbar"
+                tools:ignore="NotSibling" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottonNavigationView"
             android:layout_alignParentBottom="true"
@@ -68,13 +56,24 @@
             android:layout_gravity="bottom"
             android:background="@drawable/nav_back"
             app:elevation="50dp"
-            app:itemIconSize="@dimen/_30mdp"
-            app:itemIconTint="#27B5A7"
-            app:itemRippleColor="#520FC8"
-            app:itemTextColor="#27B5A7"
+            app:itemIconSize="@dimen/_25mdp"
+            app:itemIconTint="@color/white"
+            app:itemRippleColor="#22BCCF"
+            app:itemTextColor="@color/white"
             app:menu="@menu/bottom_nav">
 
         </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40mdp"
+            android:layout_marginHorizontal="@dimen/_1mdp"
+            android:background="@drawable/tool_gr"
+            android:elevation="@dimen/_4mdp"
+            android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:navigationIcon="@drawable/menu2" />
 
     </RelativeLayout>
 
@@ -83,7 +82,6 @@
         app:drawerLayoutCornerSize="@dimen/_35mdp"
         android:layout_height="match_parent"
         android:padding="@dimen/_5mdp"
-        android:visibility="gone"
         android:layout_marginStart="@dimen/_200mdp"
         android:id="@+id/nav_view"
         android:layout_gravity="start"

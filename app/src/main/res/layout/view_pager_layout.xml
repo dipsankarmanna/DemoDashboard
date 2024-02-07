@@ -8,7 +8,7 @@
     <ImageView
         android:id="@+id/viewpagerimg"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_200mdp"
+        android:layout_height="@dimen/_160mdp"
         android:background="@drawable/background_rec"
         android:scaleType="centerCrop"
         android:src="@drawable/pageimg1"
