@@ -9,6 +9,10 @@
         android:title="PAY"
         android:icon="@drawable/money_transfer"/>
 
+    <item android:id="@+id/navigation_aboutus"
+        android:title="About us"
+        android:icon="@drawable/ic_info"/>
+
 <!--    <item android:id="@+id/navigation_faculty"-->
 <!--        android:title="Portal"-->
 <!--        android:icon="@drawable/ic_portal"/>-->

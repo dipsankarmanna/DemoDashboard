@@ -8,9 +8,6 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.NavigationUI;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -63,12 +60,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         FragmentTransaction fragment=null;
         if (item.getItemId() == R.id.nav_home || item.getItemId()==R.id.navigation_home) {
             fragment=getSupportFragmentManager().beginTransaction().replace(binding.fragmentContainer.getId(), new HomeFragment());
+            fragment.commit();
         } else if (item.getItemId()==R.id.nav_policy) {
             Toast.makeText(this, "Policy clicked", Toast.LENGTH_SHORT).show();
         } else if (item.getItemId()==R.id.navigation_pay) {
             fragment=getSupportFragmentManager().beginTransaction().replace(binding.fragmentContainer.getId(),new PayFragment());
+            fragment.commit();
+        }else{
+            Toast.makeText(this, "coming soon", Toast.LENGTH_SHORT).show();
         }
-        fragment.commit();
         return true;
     }
 

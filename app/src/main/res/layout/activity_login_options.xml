@@ -234,8 +234,8 @@
 
         <LinearLayout
             android:layout_marginHorizontal="@dimen/_3mdp"
-            android:layout_marginVertical="@dimen/_5mdp"
             android:layout_marginTop="@dimen/_5mdp"
+            android:layout_marginBottom="@dimen/_12mdp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 

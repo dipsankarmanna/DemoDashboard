@@ -48,21 +48,32 @@
                 tools:ignore="NotSibling" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+<!--        <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--            android:id="@+id/bottonNavigationView"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/_58mdp"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:background="@drawable/nav_back"-->
+<!--            app:elevation="50dp"-->
+<!--            app:itemIconSize="@dimen/_25mdp"-->
+<!--            app:itemIconTint="@color/white"-->
+<!--            app:itemRippleColor="#22BCCF"-->
+<!--            app:itemTextColor="@color/white"-->
+<!--            app:menu="@menu/bottom_nav">-->
+
+<!--        </com.google.android.material.bottomnavigation.BottomNavigationView>-->
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottonNavigationView"
-            android:layout_alignParentBottom="true"
+            android:background="@drawable/bac_rec"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_58mdp"
-            android:layout_gravity="bottom"
-            android:background="@drawable/nav_back"
-            app:elevation="50dp"
-            app:itemIconSize="@dimen/_25mdp"
+            android:layout_height="@dimen/_60mdp"
+            android:layout_alignParentBottom="true"
             app:itemIconTint="@color/white"
-            app:itemRippleColor="#22BCCF"
             app:itemTextColor="@color/white"
-            app:menu="@menu/bottom_nav">
-
-        </com.google.android.material.bottomnavigation.BottomNavigationView>
+            android:paddingVertical="-10dp"
+            app:menu="@menu/bottom_nav"/>
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
