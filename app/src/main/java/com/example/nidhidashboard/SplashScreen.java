@@ -33,6 +33,7 @@ public class SplashScreen extends AppCompatActivity {
         binding.lay.setAlpha(1);
         binding.startImg.animate().translationY(0).alpha(1).setDuration(600).setStartDelay(200).start();
         binding.lay.animate().translationX(0).alpha(1).setDuration(600).setStartDelay(150).start();
+        //testing
 
         new Handler().postDelayed(new Runnable() {
             @Override

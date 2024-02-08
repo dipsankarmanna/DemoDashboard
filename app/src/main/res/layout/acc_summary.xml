@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/_10mdp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="17sp"
+            android:textColor="#0B0A0A"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:text="Date" />
+
+        <TextView
+            android:textSize="17sp"
+            android:textColor="#0B0A0A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/_15mdp"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:text="Amount" />
+
+        <TextView
+            android:textSize="17sp"
+            android:textColor="#0B0A0A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:text="Method" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="@dimen/_4mdp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="10/01/24"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="#0B0A0A"/>
+
+        <TextView
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="#0B0A0A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="10000" />
+
+        <TextView
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="#0B0A0A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cash" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="10/01/24"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="#0B0A0A"/>
+
+        <TextView
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="#0B0A0A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="10000" />
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="#0B0A0A"
+            android:text="Cash" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="10/01/24"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="#0B0A0A"/>
+
+        <TextView
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="#0B0A0A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="10000" />
+
+        <TextView
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="#0B0A0A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cash" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="10/01/24"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="#0B0A0A"/>
+
+        <TextView
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="#0B0A0A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="10000" />
+
+        <TextView
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="#0B0A0A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cash" />
+    </LinearLayout>
+</LinearLayout>
