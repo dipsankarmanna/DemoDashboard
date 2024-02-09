@@ -41,6 +41,6 @@ public class SplashScreen extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), LoginOptionsActivity.class));
                 finish();
             }
-        },3000);
+        },4000);
     }
 }

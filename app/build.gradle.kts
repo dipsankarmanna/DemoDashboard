@@ -48,4 +48,5 @@ dependencies {
     implementation("com.github.thomhurst:ExpandableHintText:1.0.7")
     implementation ("com.github.bumptech.glide:glide:4.15.1")
     implementation("com.facebook.shimmer:shimmer:0.5.0")
+    implementation("com.airbnb.android:lottie:3.4.0")
 }

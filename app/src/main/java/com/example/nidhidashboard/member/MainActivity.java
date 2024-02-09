@@ -1,4 +1,4 @@
-package com.example.nidhidashboard;
+package com.example.nidhidashboard.member;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.example.nidhidashboard.Fragments.HomeFragment;
 import com.example.nidhidashboard.Fragments.PayFragment;
+import com.example.nidhidashboard.R;
 import com.example.nidhidashboard.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;

@@ -1,17 +1,16 @@
 package com.example.nidhidashboard;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.TranslateAnimation;
 
+import com.example.nidhidashboard.admin.AdminDashboardActivity;
+import com.example.nidhidashboard.arranger.ArrangerDashboardActivity;
 import com.example.nidhidashboard.databinding.ActivityLoginOptionsBinding;
+import com.example.nidhidashboard.member.MainActivity;
 
 public class LoginOptionsActivity extends AppCompatActivity {
     ActivityLoginOptionsBinding binding;
@@ -85,7 +84,22 @@ public class LoginOptionsActivity extends AppCompatActivity {
         binding.btnmem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                finish();
+            }
+        });
+        binding.btnemp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), ArrangerDashboardActivity.class));
+                finish();
+            }
+        });
+        binding.btnadmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), AdminDashboardActivity.class));
+                finish();
             }
         });
     }
